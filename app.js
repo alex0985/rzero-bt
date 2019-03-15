@@ -1,7 +1,7 @@
-const Noble = require("noble");
-const BeaconScanner = require("node-beacon-scanner");
+var Noble = require("noble");
+var BeaconScanner = require("node-beacon-scanner");
 
-var scanner = new BeaconScanner();
+var scannser = new BeaconScanner();
 
 scanner.onadvertisement = (advertisement) => {
     var beacon = advertisement["iBeacon"];
