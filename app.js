@@ -1,12 +1,13 @@
 var Noble = require("noble");
 var BeaconScanner = require("node-beacon-scanner");
 
-var scannser = new BeaconScanner();
+var scanner = new BeaconScanner();
 
 scanner.onadvertisement = (advertisement) => {
-    var beacon = advertisement["iBeacon"];
-    beacon.rssi = advertisement["rssi"];
-    console.log(JSON.stringify(beacon, null, "    "))
+ //   var beacon = advertisement["iBeacon"];
+ //   beacon.rssi = advertisement["rssi"];
+    var beacon = { "hallo" : "hi" };
+    console.log(JSON.stringify(beacon, null, "    "));
 };
 
 scanner.startScan().then(() => {
