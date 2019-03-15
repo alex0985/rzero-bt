@@ -4,9 +4,8 @@ var BeaconScanner = require("node-beacon-scanner");
 var scanner = new BeaconScanner();
 
 scanner.onadvertisement = (advertisement) => {
- //   var beacon = advertisement["iBeacon"];
- //   beacon.rssi = advertisement["rssi"];
-    var beacon = { "hallo" : "hi" };
+    var beacon = advertisement["iBeacon"];
+    beacon.rssi = advertisement["rssi"];
     console.log(JSON.stringify(beacon, null, "    "));
 };
 
